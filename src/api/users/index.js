@@ -16,7 +16,7 @@ usersRouter.post("/register", async (req, res, next) => {
     const newUser = new UsersModel(req.body);
     const { _id } = await newUser.save();
     if ({ _id }) {
-      const payload = { _id: user._id, role: user.role };
+      const payload = { _id: newUser._id, role: newUser.role };
 
       const accessToken = await createAccessToken(payload);
       res.send({ accessToken });
