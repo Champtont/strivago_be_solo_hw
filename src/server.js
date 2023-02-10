@@ -21,7 +21,7 @@ server.use(passport.initialize());
 
 //  ENDPOINTS
 server.use("/users", usersRouter);
-server.use("/accomodations", accommodationsRouter);
+server.use("/accommodations", accommodationsRouter);
 // ERROR HANDLERS
 server.use(badRequestHandler);
 server.use(notFoundHandler);

@@ -57,7 +57,6 @@ accommodationsRouter.post(
     try {
       const newAccommodation = new AccommodationsModel(req.body);
       const { _id } = await newAccommodation.save();
-
       res.status(201).send({ _id });
     } catch (error) {
       next(error);
